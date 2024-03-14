@@ -7,12 +7,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import ru.mts.buy_service.dto.BuyDTO;
 import ru.mts.buy_service.service.BuyService;
+import ru.mts.buy_service.service.NotifyService;
 
 @RestController
 public class BuyController {
 
     @Autowired
     BuyService buyService;
+
+
 
     /**
      * Контроллер для покупки
@@ -22,7 +25,7 @@ public class BuyController {
     @PostMapping("/buy")
     String buy(@RequestBody BuyDTO buyDto){
 
-        return buyService.buy(buyDto.getType(), buyDto.getCount());
+        return buyService.buy(buyDto);
     }
 
 }
