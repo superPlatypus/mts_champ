@@ -1,6 +1,12 @@
-package ru.mts.chukka_service.service;
+package ru.mts.chumak_service.service;
 
 public class Order {
+
+    protected String selectedProduct;
+    protected int count;
+    protected String dateOrder;
+    protected String typeDelivery;
+    protected String city;
 
     public Order(String selectedProduct, int count, String dateOrder, String typeDelivery, String city) {
         this.selectedProduct = selectedProduct;
@@ -9,31 +15,6 @@ public class Order {
         this.typeDelivery = typeDelivery;
         this.city = city;
     }
-
-    /**
-     *  Выбранный продукт
-     */
-    protected String selectedProduct;
-
-    /**
-     *  Выбранный колличество
-     */
-    protected int count;
-
-    /**
-     *  Дата-время создание
-     */
-    protected String dateOrder;
-
-    /**
-     *  Тип доставки
-     */
-    protected String typeDelivery;
-
-    /**
-     *  Город
-     */
-    protected String city;
 
     public String getSelectedProduct() {
         return selectedProduct;
